@@ -6,7 +6,7 @@ import path, { resolve } from 'path';
 
 export default defineConfig({
   appType: 'mpa',
-  base: "pw2_vite/",
+  base: "/pw2_vite/",
   build: {
     rollupOptions: {
       input: Object.fromEntries(
