@@ -3,6 +3,7 @@ import * as glob from 'glob';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 import htmlPurge from 'vite-plugin-purgecss';
 import path, { resolve } from 'path';
+import handlebars from 'vite-plugin-handlebars';
 
 export default defineConfig({
   appType: 'mpa',
@@ -20,6 +21,9 @@ export default defineConfig({
     },
   },
   plugins: [
+    handlebars({
+      partialDirectory: resolve(__dirname, 'partials')
+    }),
     htmlPurge(),
     ViteMinifyPlugin()
   ]
