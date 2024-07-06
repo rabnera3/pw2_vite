@@ -1,39 +1,97 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="less/estilo.less">
-  <link rel="stylesheet" href="tailwindcss/index.css">
-  <title>Prueba del examen</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="/less/estilo.less">
 </head>
-
 <body>
-  {{> header}}
-  <main>
-    <img class="inline-mx-4" src="https://placeholder.com/150" alt="150x150">
-    <img src="https://placeholder.com/150" alt="150x150">
-    <section class="grid">
-      <div class="row">
-        <div class="col-6 col-md-4 col-l-2">
-          1
-        </div>
-        <div class="col-6 col-md-8 col-l-10">
-          2
-        </div>
-      </div>
-    </section>
-    <section>
-      <h2>Tailwind CSS</h2>
-      <p class="text-red-500 my-4 p-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, non assumenda. Facere nobis quis enim facilis rem quas tempore voluptatibus magnam. Voluptate nihil debitis itaque eos tempore cumque dolorem facere.</p>
-      <button class="btn-primary">botón</button>
-      <button class="btn-secondary">botón</button>
-      <button class="btn">botón</button>
-      <button class="btn-circular">botón</button>
-    </section>
-  </main>
-</body>
+  <header>
+    <div class="header-container">
+      <h1>Mi Portafolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Sobre Mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
+  <section id="about" class="about">
+    <div class="about-container">
+      <img src="https://via.placeholder.com/150" alt="Foto de Perfil" class="profile-photo">
+      <div class="about-text">
+        <h2>Sobre Mí</h2>
+        <p>Hola, soy Abner, estudiante de ingeniería en ciencias de la computación, vivo en Cucuyagua, Copán, Honduras. Me apasiona la programación y el desarrollo de software. A lo largo de mi carrera, he trabajado en diversos proyectos que abarcan desde aplicaciones web hasta bases de datos. Siempre busco mejorar mis habilidades y aprender nuevas tecnologías.</p>
+        <p>Mis hobbies incluyen jugar videojuegos, leer sobre historia y fantasía.</p>
+        <p>En este portafolio, podrás ver algunos de los proyectos en los que he trabajado, así como información sobre cómo contactarme para colaboraciones o preguntas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <h2>Proyectos</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <a href="#">
+          <img src="https://via.placeholder.com/300x200" alt="Proyecto Uno">
+          <div class="project-info">
+            <h3>Proyecto Uno</h3>
+            <p>Este es un proyecto innovador que utiliza inteligencia artificial para mejorar la eficiencia en la gestión de tareas. Implementé un algoritmo de aprendizaje automático para predecir y priorizar tareas basadas en su importancia y urgencia.</p>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="https://via.placeholder.com/300x200" alt="Proyecto Dos">
+          <div class="project-info">
+            <h3>Proyecto Dos</h3>
+            <p>Desarrollé una aplicación web interactiva que permite a los usuarios planificar sus viajes. La aplicación incluye un mapa interactivo, sugerencias de rutas y lugares de interés, y una función de colaboración en tiempo real para planificar con amigos.</p>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="https://via.placeholder.com/300x200" alt="Proyecto Tres">
+          <div class="project-info">
+            <h3>Proyecto Tres</h3>
+            <p>En este proyecto, creé un sistema de gestión de inventarios para pequeñas empresas. La aplicación permite a los usuarios monitorear sus existencias, generar reportes y recibir alertas cuando el stock es bajo. Utiliza una interfaz intuitiva y fácil de usar.</p>
+          </div>
+        </a>
+      </div>
+      <div class="project-card">
+        <a href="#">
+          <img src="https://via.placeholder.com/300x200" alt="Proyecto Cuatro">
+          <div class="project-info">
+            <h3>Proyecto Cuatro</h3>
+            <p>Diseñé y desarrollé un juego de rol en línea que ha ganado popularidad entre los jugadores. El juego cuenta con un sistema de combate complejo, una narrativa envolvente y gráficos impresionantes. Utiliza tecnologías modernas de desarrollo de juegos.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contacto</h2>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" required></textarea>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mi Portafolio</p>
+  </footer>
+</body>
 </html>
